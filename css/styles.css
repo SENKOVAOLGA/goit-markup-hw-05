@@ -81,11 +81,13 @@ color: var(--iris);
     color:var(--navy-blue);
 }
 .menu{
+    /* position: absolute; */
   display: flex;
   align-items: center;
 }
 
 .menu-link{
+    position: relative;
     display: block;
     padding-top: 24px; 
     padding-bottom: 24px;
@@ -99,7 +101,26 @@ color: var(--iris);
 .menu-link:focus{
     color:var(--ocean);
 }
+.menu-link::after{
+  content: '';
+  position: absolute;
+  bottom: 12px;
+  left: 0;
 
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+
+}
+.menu-link.current{
+color: var(--ocean);
+}
+.menu-link.current::after,
+.menu-link:hover::after,
+.menu-link:focus::after {
+  background-color: var(--ocean);
+}
 .contact-link{
  display: flex;
  align-items: center;
