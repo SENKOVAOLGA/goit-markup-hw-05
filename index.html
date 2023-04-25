@@ -46,7 +46,7 @@
         <div class="container container-hero">
         <h1 class="hero-title">Effective Solutions for Your Business 
         </h1>
-        <button class="btn" type="button">Order Service </button>
+        <button class="btn" type="button" data-modal-open>Order Service </button>
       </div>     
       </section>
 
@@ -505,9 +505,9 @@
     </footer>
 
 <!-- Modal window -->
-    <div class="backdrop">
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-btn"  type="button">
+        <button class="modal-btn"  type="button" data-modal-close>
           <svg class="modal-icon" width="20" height="20">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
