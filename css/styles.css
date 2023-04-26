@@ -109,7 +109,7 @@ color: var(--iris);
 .menu-link::after{
   content: '';
   position: absolute;
-  bottom: 12px;
+  bottom:0;
   left: 0;
 
   display: block;
@@ -122,9 +122,10 @@ color: var(--iris);
 color: var(--ocean);
 transition: background-color var(--anim-fast);
 }
-.menu-link.current::after,
-.menu-link:hover::after,
-.menu-link:focus::after {
+.menu-link.current::after
+/* .menu-link:hover::after,
+.menu-link:focus::after  */
+{
   background-color: var(--ocean);
 }
 .contact-link{
@@ -440,12 +441,12 @@ letter-spacing: 0.04em;
 color:var(--iris);
 background-color:var(--cloud);
 cursor: pointer;
-display: flex;
+/* display: flex;
 flex-direction: row;
-align-items: flex-start;
+align-items: flex-start; */
 padding: 12px 24px;
 display: inline-block;
-border: 1px solid var(--cornflower);
+border: 1px solid var(--cornflower); 
  border-radius: 4px;
  transition: color var(--anim-fast),background-color var(--anim-fast),box-shadow var(--anim-fast);
  }
@@ -454,7 +455,8 @@ border: 1px solid var(--cornflower);
 
     color: var(--white);
     background-color:var(--ocean);
-    border: 1px solid transparent;
+    /* border-color: 1px solid transparent var(--ocean); */
+    border-color:  var(--ocean);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12); 
 
 }
@@ -558,6 +560,7 @@ display: flex;
   position: absolute;
   top: 0;
   left: 0;
+  padding: 40px 32px;
   width: 100%;
   height: 100%;
   background-color: var(--iris);
@@ -572,7 +575,7 @@ display: flex;
 
 .overlay p {
   color: var(--cloud);
-  padding: 40px 32px;
+  
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
@@ -609,7 +612,7 @@ display: flex;
   transform: translate(-50%,-50%) rotate(0) scale(1);
   opacity: 1;
 
-  padding: 24px;
+  /* padding: 24px; */
 
   background-color: #FFFFFF;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -625,8 +628,8 @@ display: flex;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
 
   color: var(--secondary-bg-cl);
 
